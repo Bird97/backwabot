@@ -2,18 +2,18 @@
   "name": "wabot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nest start",
+    "start": "node dist/main.js",
+    "start:prod": "node dist/main.js",
     "start:dev": "nest start --watch",
-    "build": "tsc && tsc-alias",
+    "build": "nest build",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "migration:generate": "npm run typeorm -- migration:generate src/Infrastructure/Database/Migrations/AutoMigration -d src/Infrastructure/Database/data-source.ts",
     "migration:run": "npm run typeorm -- migration:run -d src/Infrastructure/Database/data-source.ts",
     "migration:revert": "npm run typeorm -- migration:revert -d src/Infrastructure/Database/data-source.ts",
     "migration:create": "npm run typeorm -- migration:create src/Infrastructure/Database/Migrations/ManualMigration -d src/Infrastructure/Database/data-source.ts"
-  },
+  }
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -63,4 +63,5 @@
     "typescript": "5.8.3"
   }
 }
+
 
