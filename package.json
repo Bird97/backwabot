@@ -13,7 +13,7 @@
     "migration:run": "npm run typeorm -- migration:run -d src/Infrastructure/Database/data-source.ts",
     "migration:revert": "npm run typeorm -- migration:revert -d src/Infrastructure/Database/data-source.ts",
     "migration:create": "npm run typeorm -- migration:create src/Infrastructure/Database/Migrations/ManualMigration -d src/Infrastructure/Database/data-source.ts"
-  }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -63,5 +63,6 @@
     "typescript": "5.8.3"
   }
 }
+
 
 
